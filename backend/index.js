@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 4000
 
 const tasks = {}
 
@@ -27,7 +26,7 @@ app.delete('/tasks/:id', (req,res)=>{
     res.send({})
 })
 
-
+const port = process.env.port || 4000;
 app.listen(port, () => {
   console.log(`Todo app listening at http://localhost:${port}`)
   console.log('GET    ---   /tasks')
