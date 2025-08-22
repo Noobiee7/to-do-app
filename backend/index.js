@@ -26,7 +26,7 @@ app.delete('/tasks/:id', (req,res)=>{
     res.send({})
 })
 
-const port = process.env.port;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Todo app listening at http://localhost:${port}`)
   console.log('GET    ---   /tasks')
